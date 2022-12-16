@@ -10,8 +10,8 @@ public class StatisticsServiceTest {
     void findMax() {
         StatisticsService service = new StatisticsService();
 
-        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-        long expected = 12;
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 18, 11, 12};
+        long expected = 18;
 
         long actual = service.findMax(incomesInBillions);
 
@@ -19,11 +19,11 @@ public class StatisticsServiceTest {
     }
 
     @Test
-    void findMax2() {
+    void findMaxIfFirstElementLargest() {
         StatisticsService service = new StatisticsService();
 
-        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 56, 11, 12};
-        long expected = 56;
+        long[] incomesInBillions = {14, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 14;
 
         long actual = service.findMax(incomesInBillions);
 
